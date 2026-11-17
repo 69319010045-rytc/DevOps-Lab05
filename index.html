@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Jigsaw Puzzle</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div class="title-wrap">
+          <p class="eyebrow">PC Puzzle Game</p>
+          <h1>Car Jigsaw</h1>
+        </div>
+
+        <div class="status-panel">
+          <div class="stat-box">
+            <span class="label">Moves</span>
+            <span id="moves">0</span>
+          </div>
+          <div class="stat-box">
+            <span class="label">Time</span>
+            <span id="timer">00:00</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="controls">
+        <div class="difficulty-group" aria-label="Difficulty selection">
+          <button class="difficulty-btn active" data-level="easy">Easy (35)</button>
+          <button class="difficulty-btn" data-level="medium">Medium (50)</button>
+          <button class="difficulty-btn" data-level="hard">Hard (100)</button>
+        </div>
+
+        <div class="action-group">
+          <button id="shuffle" class="primary-btn">Shuffle</button>
+          <button id="reset" class="secondary-btn">Reset</button>
+        </div>
+      </section>
+
+      <div id="status" class="status" aria-live="polite">
+        Drag pieces into place to rebuild the car image.
+      </div>
+
+      <section class="game-shell">
+        <div id="board" class="board" aria-label="Puzzle board"></div>
+      </section>
+    </main>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
